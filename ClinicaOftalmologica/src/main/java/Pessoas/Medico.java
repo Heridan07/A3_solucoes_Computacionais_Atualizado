@@ -62,12 +62,44 @@ public class Medico extends Pessoa {
 		System.out.println(this); 
 		System.out.println(); 		      
     }
-    
+
+	
     public void editarCadastroDeMedico(){ //Método para exclusão/alteração de dados cadastrais.
     
+    int opcao;
     
-        
-        
+    System.out.println("Escolha uma das opções:");
+        System.out.println();
+        System.out.println("Editar dados cadastrais[1].");
+        System.out.println("Excluir cadastro[2].");
+        System.out.println();
+        System.out.print("Selecione: ");
+        opcao =sc.nextInt();
+       
+        switch(opcao) {
+
+            case 1://Para editar cadastro
+               
+                       
+             break;
+
+
+           case 2://Para excluir cadastro  
+			
+           System.out.println("Informe o CRM:"); 
+
+           String excluirMedico=sc.next();
+
+           for (int i = 0; i < listMedicos.size(); i++) {
+		   
+               if (listMedicos.get(i).getCrm().equals(excluirMedico)) {
+                 listMedicos.remove(i);
+		       
+               }
+            }
+			
+           break;
+	}
         
         
     }
