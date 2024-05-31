@@ -142,7 +142,7 @@ public class Medico extends Pessoa {
           }
           else {
               
-              if(count!=0){
+              if(count==0){
 
               System.out.println("Médico não encontrado.");
               
