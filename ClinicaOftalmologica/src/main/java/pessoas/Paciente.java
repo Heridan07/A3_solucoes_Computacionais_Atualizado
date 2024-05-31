@@ -101,32 +101,37 @@ public class Paciente extends Pessoa {
                   
                   switch (selecao) {
                       case 1:
-
+		          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Nome: ");
                           String nome = sc.next();
                           listPacientes.get(i).setNome(nome);
                           break;
                       case 2:
+		          System.out.println("Informe o novo dado cadastral");
                           System.out.print("CPF: ");
                           String cpf = sc.next();
                           listPacientes.get(i).setCpf(cpf);
                           break;
                       case 3:
+			  System.out.println("Informe o novo dado cadastral");
                           System.out.print("RG: ");
                           String rg = sc.next();
                           listPacientes.get(i).setRg(rg);
                           break;
                       case 4:
+			  System.out.println("Informe o novo dado cadastral");
                           System.out.print("Sexo: ");
                           Character sexo = sc.next().charAt(0);
                           listPacientes.get(i).setSexo(sexo);
                           break;
                       case 5:
+			  System.out.println("Informe o novo dado cadastral");
                           System.out.print("Data de Nascimento: ");
                           String dataNasc = sc.next();
                           listPacientes.get(i).setDataNasc(dataNasc);
                           break;
                       case 6:
+			  System.out.println("Informe o novo dado cadastral");
                           System.out.print("Celular: ");
                           String celular = sc.next();
                           listPacientes.get(i).setCelular(celular);
