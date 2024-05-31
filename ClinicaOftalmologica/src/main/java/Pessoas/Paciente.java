@@ -76,14 +76,36 @@ public class Paciente extends Pessoa {
          public void editarCadastroDePaciente(){
              
              
-             /*System.out.println("Selecione a atualização: "); //Tava tentando fazer
-             System.out.println("Atualizar nome:[1]");
-             System.out.println("Atualizar cpf:[2]");
-             System.out.println("Atualizar rg:[3]");
-             System.out.println("Atualizar sexo:[4]");
-             System.out.println("Atualizar Data de Nascimento:[5]");
-             System.out.println("Atualizar celular:[6]");
-             System.out.println("Encerrar operação:[0]");*/
+            int opcao;
+    
+                System.out.println("Escolha uma das opções:");
+                System.out.println();
+                System.out.println("Editar dados cadastrais[1].");
+                System.out.println("Excluir cadastro[2].");
+                System.out.println();
+                System.out.print("Selecione: ");
+                opcao =sc.nextInt();
+
+                switch(opcao) {
+
+                    case 1://Para editar cadastro
+                       
+
+                     break;
+
+
+                   case 2://Para excluir cadastro  
+                   System.out.println("Informe o CPF:"); 
+
+                   String excluirPaciente=sc.next();
+
+                   for (int i = 0; i < listPacientes.size(); i++) {
+                       if (listPacientes.get(i).getCpf().equals(excluirPaciente)) {
+                         listPacientes.remove(i);
+                       }
+                   }
+                   break;
+                }
              
              
         
