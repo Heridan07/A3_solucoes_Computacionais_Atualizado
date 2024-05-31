@@ -75,12 +75,10 @@ public class Consulta {
                count++;
 
               System.out.println("Selecione a atualização: "); 
-              System.out.println("Atualizar nome:[1]");
-              System.out.println("Atualizar cpf:[2]");
-              System.out.println("Atualizar rg:[3]");
-              System.out.println("Atualizar sexo:[4]");
-              System.out.println("Atualizar Data de Nascimento:[5]");
-              System.out.println("Atualizar celular:[6]");
+              System.out.println("Atualizar nome do médico:[1]");
+              System.out.println("Atualizar nome do paciente:[2]");
+              System.out.println("Atualizar data:[3]");
+              System.out.println("Atualizar hora:[4]");
               System.out.println("Encerrar operação:[0]");
 
                   int selecao=sc.nextInt();
