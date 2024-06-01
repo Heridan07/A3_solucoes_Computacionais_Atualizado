@@ -69,16 +69,16 @@ public class Medico extends Pessoa {
     
     
     public void editarCadastroDeMedico(){ //Método para exclusão/alteração de dados cadastrais.
-            int count=0;
+           int count=0;
         System.out.println("Informe o nome do Medico: ");
-         String procurarMedico =sc.next();
+        String procurarMedico =sc.next();
 
                
         for (int i = 0; i < listMedicos.size(); i++) {
           if (listMedicos.get(i).getNome().equals(procurarMedico)) {
              
                count++;
-
+              while(true){
               System.out.println("Selecione a atualização: "); 
               System.out.println("Atualizar nome:[1]");
               System.out.println("Atualizar cpf:[2]");
@@ -140,20 +140,16 @@ public class Medico extends Pessoa {
                   }
 
                  System.out.println("Dados do médico atualizados com sucesso!");
-
-          }
-          else {
-              
-              if(count!=0){
-
-              System.out.println("Médico não encontrado.");
-              
               }
-            }
+              
+          }
+           if(count==0){
 
-             
-        }       
-        
+            System.out.println("Médico não encontrado.");
+              
+           }
+       
+        }  
         
      }
     
