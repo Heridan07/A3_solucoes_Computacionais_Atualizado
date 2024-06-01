@@ -77,89 +77,88 @@ public class Paciente extends Pessoa {
     public void editarCadastroDePaciente(){
              
             
-        int count=0;
-        System.out.println("Informe o nome do paciente: ");
+       System.out.println("Informe o nome do paciente: ");
         String procurarPaciente =sc.next();
-
+        
+         int count=0;
               
         for (int i = 0; i < listPacientes.size(); i++) {
           if (listPacientes.get(i).getNome().equals(procurarPaciente)) {
-             
-               count++;
+                   
+                  count++;
 
-              System.out.println("Selecione a atualização: "); 
-              System.out.println("Atualizar nome:[1]");
-              System.out.println("Atualizar cpf:[2]");
-              System.out.println("Atualizar rg:[3]");
-              System.out.println("Atualizar sexo:[4]");
-              System.out.println("Atualizar Data de Nascimento:[5]");
-              System.out.println("Atualizar celular:[6]");
-              System.out.println("Encerrar operação:[0]");
+                       while(true){
+                            System.out.println("Selecione a atualização: "); 
+                            System.out.println("Atualizar nome:[1]");
+                            System.out.println("Atualizar cpf:[2]");
+                            System.out.println("Atualizar rg:[3]");
+                            System.out.println("Atualizar sexo:[4]");
+                            System.out.println("Atualizar Data de Nascimento:[5]");
+                            System.out.println("Atualizar celular:[6]");
+                            System.out.println("Encerrar operação:[0]");
+                         int selecao=sc.nextInt();
+                       switch (selecao) {
 
-                  int selecao=sc.nextInt();
+                           case 1:
+                               System.out.println("Informe o novo dado cadastral");
+                               System.out.print("Nome: ");
+                               String nome = sc.next();
+                               listPacientes.get(i).setNome(nome);
+                               break;
+                           case 2:
+                               System.out.println("Informe o novo dado cadastral");
+                               System.out.print("CPF: ");
+                               String cpf = sc.next();
+                               listPacientes.get(i).setCpf(cpf);
+                               break;
+                           case 3:
+                               System.out.println("Informe o novo dado cadastral");
+                               System.out.print("RG: ");
+                               String rg = sc.next();
+                               listPacientes.get(i).setRg(rg);
+                               break;
+                           case 4:
+                               System.out.println("Informe o novo dado cadastral");
+                               System.out.print("Sexo: ");
+                               Character sexo = sc.next().charAt(0);
+                               listPacientes.get(i).setSexo(sexo);
+                               break;
+                           case 5:
+                               System.out.println("Informe o novo dado cadastral");
+                               System.out.print("Data de Nascimento: ");
+                               String dataNasc = sc.next();
+                               listPacientes.get(i).setDataNasc(dataNasc);
+                               break;
+                           case 6:
+                               System.out.println("Informe o novo dado cadastral");
+                               System.out.print("Celular: ");
+                               String celular = sc.next();
+                               listPacientes.get(i).setCelular(celular);
+                               break;
+                           case 0:
+                               System.out.println("Operação encerrada.");
+                              
+                               return;
 
-                  
-                  switch (selecao) {
-                      case 1:
-		          System.out.println("Informe o novo dado cadastral");
-                          System.out.print("Nome: ");
-                          String nome = sc.next();
-                          listPacientes.get(i).setNome(nome);
-                          break;
-                      case 2:
-		          System.out.println("Informe o novo dado cadastral");
-                          System.out.print("CPF: ");
-                          String cpf = sc.next();
-                          listPacientes.get(i).setCpf(cpf);
-                          break;
-                      case 3:
-			  System.out.println("Informe o novo dado cadastral");
-                          System.out.print("RG: ");
-                          String rg = sc.next();
-                          listPacientes.get(i).setRg(rg);
-                          break;
-                      case 4:
-			  System.out.println("Informe o novo dado cadastral");
-                          System.out.print("Sexo: ");
-                          Character sexo = sc.next().charAt(0);
-                          listPacientes.get(i).setSexo(sexo);
-                          break;
-                      case 5:
-			  System.out.println("Informe o novo dado cadastral");
-                          System.out.print("Data de Nascimento: ");
-                          String dataNasc = sc.next();
-                          listPacientes.get(i).setDataNasc(dataNasc);
-                          break;
-                      case 6:
-			  System.out.println("Informe o novo dado cadastral");
-                          System.out.print("Celular: ");
-                          String celular = sc.next();
-                          listPacientes.get(i).setCelular(celular);
-                          break;
-                      case 0:
-                          System.out.println("Operação encerrada.");
-                          break;
+                           default:
+                               break;
 
-                      default:
-                          break;
+                       }
+                        System.out.println("Dados do paciente atualizados com sucesso!");
+                       }
 
-                  }
+          
+                 } 
+                 if(count==0){
 
-                 System.out.println("Dados do paciente atualizados com sucesso!");
-
-          }
-          else {
+                    System.out.println("Paciente não encontrado.");
               
-              if(count!=0){
+                 }
 
-              System.out.println("Paciente não encontrado.");
               
-              }
-          }
+                                      
 
-             
-              
-        }
+        }  
       }
         
         
