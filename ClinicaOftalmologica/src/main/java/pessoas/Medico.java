@@ -93,44 +93,46 @@ public class Medico extends Pessoa {
 
                   switch (selecao) {
                       case 1:
-		          System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
+
                           System.out.print("Nome: ");
                           String nome = sc.next();
                           listMedicos.get(i).setNome(nome);
                           break;
                       case 2:
-		          System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("CPF: ");
                           String cpf = sc.next();
                           listMedicos.get(i).setCpf(cpf);
                           break;
                       case 3:
-			  System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("RG: ");
                           String rg = sc.next();
                           listMedicos.get(i).setRg(rg);
                           break;
                       case 4:
-		          System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Sexo: ");
                           Character sexo = sc.next().charAt(0);
                           listMedicos.get(i).setSexo(sexo);
                           break;
                       case 5:
-			  System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Data de Nascimento: ");
                           String dataNasc = sc.next();
                           listMedicos.get(i).setDataNasc(dataNasc);
                           break;
                       case 6:
-			  System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Celular: ");
                           String crm = sc.next();
                           listMedicos.get(i).setCrm(crm);
                           break;
                       case 0:
                           System.out.println("Operação encerrada.");
-                          break;
+                          
+                          return;
 
                       default:
                           break;
@@ -142,7 +144,7 @@ public class Medico extends Pessoa {
           }
           else {
               
-              if(count==0){
+              if(count!=0){
 
               System.out.println("Médico não encontrado.");
               
@@ -150,8 +152,7 @@ public class Medico extends Pessoa {
             }
 
              
-        }  
-                 
+        }       
         
         
      }
