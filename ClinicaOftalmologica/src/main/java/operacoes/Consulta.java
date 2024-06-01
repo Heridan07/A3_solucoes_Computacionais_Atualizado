@@ -64,6 +64,7 @@ public class Consulta {
         
         
         public void editarConsulta(){
+		
         int count=0;
         System.out.println("Informe o nome do Médico responsável: ");
          String procurarConsulta =sc.next();
@@ -73,7 +74,7 @@ public class Consulta {
           if (listConsultas.get(i).getMedicoNome().equals(procurarConsulta)) {
              
                count++;
-
+              while(true){
               System.out.println("Selecione a atualização: "); 
               System.out.println("Atualizar nome do médico:[1]");
               System.out.println("Atualizar nome do paciente:[2]");
@@ -86,25 +87,25 @@ public class Consulta {
 
                   switch (selecao) {
                       case 1:
-			  System.out.println("Informe o novo dado cadastral");	
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Nome do Médico: ");
                           String MedicoNome = sc.next();
                           listConsultas.get(i).setMedicoNome(MedicoNome);
                           break;
                       case 2:
-			  System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Nome do Paciente: ");
                           String PacienteNome = sc.next();
                           listConsultas.get(i).setPacienteNome(PacienteNome);
                           break;
                       case 3:
-		          System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Data: ");
                           String Data = sc.next();
                           listConsultas.get(i).setData(Data);
                           break;
                       case 4:
-			  System.out.println("Informe o novo dado cadastral");
+                          System.out.println("Informe o novo dado cadastral");
                           System.out.print("Horário: ");
                           String Horario = sc.next();
                           listConsultas.get(i).setHorario(Horario);
@@ -112,7 +113,8 @@ public class Consulta {
                       
                       case 0:
                           System.out.println("Operação encerrada.");
-                          break;
+                          
+                          return;
 
                       default:
                           break;
@@ -120,19 +122,18 @@ public class Consulta {
                   }
 
                  System.out.println("Dados do paciente atualizados com sucesso!");
-
+            }
           }
-          else {
-              
+          
               if(count!=0){
 
               System.out.println("Paciente não encontrado.");
               
               }
-          }
+          
 
              
-            }  
+            }   
         
         }
         
